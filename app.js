@@ -1,5 +1,8 @@
-// creo una variable para guardar los nombres de los amigos
-// como son muchos nos conviene hacer una lista
+let listaAmigos = []; 
+// agarro el elemento que quiero guardar
+let inputListaAmigos = document.getElementById("amigos");
 
-let listaAmigos = []; // sera un arreglo (una lista)
+
+
+
 
