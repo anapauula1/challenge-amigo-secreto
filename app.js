@@ -1,16 +1,20 @@
-let listaAmigos = []; 
-// agarro el elemento que quiero guardar
-let inputListaAmigos = document.getElementById("amigos");
-// llamo a un objeto que pobre utilizar en las proximas lineas
-// selecciono al elemento
-let listaDeAmigos = [] // lista vacia
-const ulAmigos = document.getElementById("listaAmigos");
+const inputAmigos = document.getElementById("amigo");
+const listaDeAmigos = [];
+const ulListaDeAmigos = document.getElementById("listaAmigos");
+const ulResultado = document.getElementById("resultado");
+
 function agregarAmigo(){
-    // funcion de onclick
-    listaAmigos.push(inputListaAmigos.value);
-    // le estamos diciendo que empuje el resultado
-    // el nombre que mostramos en el input
+    listaDeAmigos.push(inputAmigos.value);
+    ulListaDeAmigos.innerHTML += `<li> ${inputAmigos.value} </li>`;
 }
+function sortearAmigo(){
+     const random = Math.floor(Math.random() * listaDeAmigos.length);
+     const amigoSecreto = listaDeAmigos[random];
+     ulResultado.innerHTML = `<li> El amigo Secreto es ${amigoSecreto} </li>`;
+}
+
+
+
 
 
 
